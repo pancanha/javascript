@@ -8,17 +8,18 @@
 </head>
 <body>
     <h1>Teste de nacionalidade</h1>
-    Nacionalidade: <input type="text" id="text">
-    <input type="button" value="Veficiar" onclick="calcular ()">
+    Nacionalidade: 
+    <input type="text" id="nacionalidade" name="nacionalidade">
+    <button type="button" onclick="verificar()">Verificar</button>
+    
     <div id="res">
 
     </div>
     <script>
-        function calcular(){
-        var text = window.document.querySelector('input#text')
-        var país = s
-        var res = window.document.querySelector('div#res')
-        if (país == 'BR') {
+        function verificar(){
+        var nacionalidade = window.document.getElementById("nacionalidade").value;
+        var resultado = document.getElementById("res");
+        if (nacionalidade.toLowerCase()==="br") {
             res.innerHTML = `<p> Você é Brasileiro lascado</p>`
         } else {
             res.innerHTML = `<p> Escapou, não é BR HUE</p>`
@@ -28,11 +29,3 @@
     
 </body>
 </html>
-var país = 'EUA'
-console.log(`Vivendo em ${país}`)
-if (país == 'Brasil') {
-    console.log('Você é Brasileiro!')
-
-} else {
-    console.log('Você é Estrangeiro!')
-}
